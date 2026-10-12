@@ -18,8 +18,10 @@ three main narrative pages and six labelled evidence appendices. A concise READM
 links to optional detailed usage; reviewer navigation and layout were verified.
 Hassan supplied his recording and chose the Loom link; it is linked from Doc
 page 1 and README. Duration, contents, and public viewing access are unverified.
-At Hassan's request, proceed one step at a time: GitHub publication, final
-duration/access checks, and form submission.
+The public GitHub repository is now published and linked from Doc page 1 and
+README. Its 22 files matched the local bytes; an unauthenticated clone passed
+45 tests with the existing environment. At Hassan's request, proceed one step
+at a time: final duration/access checks, then form submission.
 The local address remains
 **http://127.0.0.1:8502**.
 
@@ -1187,3 +1189,87 @@ Next: publish the code to GitHub as a separate step, add its direct link, then
 confirm the recording is at most five minutes and verify reviewer access to
 all three artifacts before submitting the Google Form. The presenter-guide
 application remains an unimplemented optional plan; it is not a submission blocker.
+
+## Public GitHub publication
+
+Date: October 11, 2026 (America/Los_Angeles). Status: **Published and verified.**
+
+### Actual user requests during this step
+
+```text
+Let's get the code up onto github next then
+```
+
+```text
+I opened it go ahead
+```
+
+```text
+Can you give me a description
+```
+
+```text
+and any other information
+```
+
+The last request included the GitHub repository-creation screenshot. Provided a
+description and advised Public, README On, no generated gitignore and no license.
+Hassan created the repository himself and supplied:
+
+```text
+[https://github.com/hjsubs-max/campaign-analyzer](https://github.com/hjsubs-max/campaign-analyzer)
+```
+
+Two earlier browser attempts stopped when the active URL prohibited computer use.
+No repository was created by those attempts and no files changed. After Hassan
+created it, all publication used the connected GitHub tools and Git, with no
+further browser control. The connected account is hjsubs-max.
+
+### Each file or document changed
+
+| File/document | Actual change and reason |
+|---|---|
+| .gitignore | Added environment-file variants, notebook/test caches and bytecode exclusions. Excluded submission/, SUBMISSION_GUIDE.md and presenter-only docs/DEMO_GUIDE_PLAN.md to retain preparation artifacts locally. |
+| README.md | Added the real GitHub repository link alongside the Doc and Loom links. |
+| PROJECT_BRIEF.md | Marked publication complete and described the published contents and verification scope. |
+| PROGRESS.md | Updated current status and recorded the actual prompts, blocked browser attempts, repository creation by Hassan, publication, checks and remaining steps. |
+| SUBMISSION_GUIDE.md | Marked GitHub complete, supplied its direct URL, and reduced remaining work to recording/access checks and submission. This preparation file remains local. |
+| submission/document_manifest.json | Recorded the repository URL, verified public status, application check scope and current native Doc revision/PDF evidence. This preparation file remains local. |
+| Existing native Google Doc | Replaced the page-1 source-code pending label with a linked GitHub repository label. Preserved reflection, images and table; sharing permissions unchanged. |
+| campaign-analyzer/.git/ | Initialized this project's Git history, configured a local GitHub noreply author identity, and tracked the new repository's main branch. No global Git settings or course-repo files changed. |
+
+### Publication and checks actually completed
+
+- Confirmed repository visibility is public and the connector has push access.
+  Prepared 22 UTF-8 project files, including modules, three test files, both
+  synthetic CSVs, notebooks, inspection controls, dataset guide, dependency files,
+  README, user guide, brief and build log. No virtual environment, secrets, local
+  submission documents/images or rehearsal plan was uploaded.
+- Checked candidate paths and scanned candidate file contents for private keys,
+  common GitHub/OpenAI/AWS credential formats and quoted credential assignments.
+  Found no matches. Confirmed gitignore exclusions with git check-ignore.
+  This is a bounded pattern scan, not proof that every possible secret format was detected.
+- Created a tree and commit through the GitHub connector; advanced main with a
+  checked previous head. Initial published-file reconciliation caught newline
+  normalization in the compatible CSV. Corrected its GitHub blob to preserve
+  original CRLF bytes; local CSVs were unchanged. The corrected application
+  snapshot is commit 6974b0ddfd7bf76cea9dc8f409454f3b0c2f4bd0.
+- Fetched that commit and compared every published file's bytes against the local
+  project: 22 files, zero mismatches. Local Git tracks origin/main.
+- Ran the local suite: 45 tests passed. Then cloned GitHub anonymously with the
+  credential helper disabled into /private/tmp/campaign-analyzer-published-check.
+  That published checkout also passed all 45 tests using campaign-analyzer's
+  existing Python environment. Dependency installation into a fresh environment
+  was not repeated; source tests, public clone access and locked dependencies
+  are available for reviewers to reproduce.
+- Native Doc readback verified the complete GitHub label/target, unchanged
+  expanded reflection, six embedded images and one metric table. Exported PDF
+  remains nine pages; visually inspected updated page 1. Other pages were not
+  visually reinspected this turn. The Doc still reports owner-only access.
+- Published a documentation follow-up with the current brief/build log. App code,
+  CSVs and dependencies stayed unchanged. No additional application test run
+  was needed after documentation-only edits. No deployment or form submission
+  occurred; port 8502 is unchanged.
+
+Next: make the Google Doc viewable to reviewers, confirm Loom viewing access and
+the five-minute limit, then submit the three direct artifact links through the form.

@@ -143,15 +143,27 @@ The concise README provides the same navigation and launch/check commands;
 `docs/USER_GUIDE.md` preserves detailed instructions as optional supporting material.
 Hassan's expanded reflection, original prompts, metric table, and six screenshots
 remain intact. Final layout and page references were verified. The Loom video
-link is now present; GitHub publication remains pending. No public sharing
-changes or submission have been performed by the assistant.
+and GitHub links are now present. The public repository is
+[hjsubs-max/campaign-analyzer](https://github.com/hjsubs-max/campaign-analyzer).
+No Google Doc sharing changes or form submission have been performed.
 
 Hassan supplied his recording and explicitly chose to use the Loom link. Its
 duration, contents, and reviewer viewing access remain unverified. Hassan
-requested one step at a time: GitHub publication is next, followed by final
-duration/access checks and form submission. Original document source and evidence are in
+requested one step at a time: GitHub publication is complete; final duration/access
+checks and form submission are next. Original document source and evidence are in
 `submission/`; the Google Doc is the current version with Hassan's edits. These
 documentation milestones changed no app code, source data, or dependencies.
+
+## Completed milestone: public GitHub repository
+
+Published 22 project files: app modules, tests, primary and compatible synthetic
+CSVs, dependency files, dataset/inspection evidence, README, user guide, brief and
+build log. Local submission-generation files and preparation notes remain outside
+Git. The repository's file bytes reconciled with the local project; an unauthenticated
+clone passed all 45 tests using the existing isolated Python environment. This
+checks the submitted code without claiming a fresh dependency installation.
+Git is initialized only inside campaign-analyzer and tracks origin/main. App code,
+CSV contents, dependency versions and port 8502 are unchanged.
 
 Use aggregated numerators and denominators for all ratios. Treat zero denominators
 as N/A and genuine zero numerators as zero. Do not fill unknown revenue with zero;
