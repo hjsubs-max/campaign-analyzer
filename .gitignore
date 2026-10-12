@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.env
+.env.*
+.streamlit/secrets.toml
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+*.pyc
+
+# Local submission preparation; the current Google Doc is linked in README.
+submission/
+SUBMISSION_GUIDE.md
+docs/DEMO_GUIDE_PLAN.md

@@ -1,0 +1,125 @@
+CAMPAIGN ANALYZER DEMONSTRATION DATA
+
+Status: SYNTHETIC. All records and simulation choices were created for this
+assignment. No real business data or advertising benchmarks were used.
+
+FILES
+campaign_data_synthetic.csv: load this into the Streamlit app.
+campaign_dataset_generate_and_check.ipynb: optional regeneration and validation
+companion. Python cells were executed in order in one fresh Python namespace
+and outputs recorded; no Jupyter kernel was used for that run. It requires
+Python 3, NumPy, and pandas. Rerunning writes the CSV in the working folder.
+
+COVERAGE
+4,040 rows; 24 campaigns; 183 calendar dates; April 1-September 30, 2026.
+Channels: Facebook, Instagram, Pinterest, Twitter (the label used in the handout).
+Audiences: Prospecting, Retargeting, Existing Customers.
+Goals: Sales, Traffic, Awareness.
+All money is USD. The CSV uses UTF-8, comma separators, one header row,
+ISO dates, integer counts, and numeric money with two decimal places.
+
+GRAIN AND KEYS
+One row = one campaign on one day. Each campaign has one channel, audience,
+and goal. Unique key: date + campaign_id + channel. Group campaigns by ID;
+campaign_name is the display label. Absence outside a campaign's active dates
+means the campaign was not active; it is not a missing historical partition.
+Every day in the overall period has records.
+
+COLUMNS
+date: calendar reporting date, YYYY-MM-DD; no timestamp/timezone conversion.
+campaign_id: stable unique campaign identifier, CMP001-CMP024.
+campaign_name: searchable display name.
+channel: advertising platform; map to platform if the app uses that name.
+audience: target-audience segment.
+goal: campaign objective; map to campaign_goal if the app uses that name.
+impressions: ad impressions, integer >= 0.
+clicks: ad clicks, integer >= 0 and <= impressions.
+conversions: attributed PURCHASES, integer >= 0 and <= clicks, for all goals.
+spend: reported advertising spend in USD, >= 0.
+revenue: revenue attributed to those purchases in USD, >= 0; known on every row.
+currency: USD on every row; do not mix currencies when aggregating.
+dataset_type: synthetic on every row; retain the label in the demo.
+
+SIMULATION ASSUMPTIONS
+The fictional advertiser is a consumer retail store. Purchase values vary by
+campaign and day. Conversions represent purchases even when the campaign goal
+is Traffic or Awareness, so the conversion totals remain comparable. Purchases
+are assigned to a single campaign; there is no cross-platform double counting
+in this simulation. Revenue excludes tax, shipping, refunds, product cost,
+agency fees, and operating costs. This is a clean simulation, not an ad-platform
+export or evidence of real channel performance.
+
+TIME-SERIES DEMONSTRATIONS
+Daily noise and weekend variation are simulated. Summer Launch campaigns run
+May 15-August 31. Discover the Brand starts April 15. Instagram Summer Launch
+purchase probability increases after June 15. Pinterest Traffic purchase
+probability increases after July 1. Twitter CPM increases and purchase
+probability declines after August 15. These are chosen simulation rules;
+observed charts will also include random variation and changes in campaign mix.
+
+METRIC DEFINITIONS
+Apply all filters first. Then sum raw measures before calculating:
+CTR = SUM(clicks) / SUM(impressions).
+CVR = SUM(conversions) / SUM(clicks); this is click-to-purchase conversion rate.
+CPC = SUM(spend) / SUM(clicks).
+CPA = SUM(spend) / SUM(conversions).
+ROAS = SUM(revenue) / SUM(spend), displayed as a multiplier such as 2.3x.
+ROI on an ad-spend basis = (SUM(revenue) - SUM(spend)) / SUM(spend).
+Label the last metric "Ad-spend return" or "ROI (ad-spend basis)" and state that
+product and operating costs are excluded. It is not full business profit ROI.
+Display CTR, CVR, and ad-spend return as percentages: multiply fractions by 100.
+If a denominator is zero, display N/A instead of infinity or an invented zero.
+Do not average row-level or campaign-level rates to get portfolio totals.
+For an empty selection, show a clear no-data state.
+Missing revenue is not included in this file. In other uploads, never silently
+treat missing revenue as zero or calculate complete-data ROAS without a warning.
+
+ALL-FILTERS-RESET REFERENCE TOTALS
+Impressions: 30,156,909
+Clicks: 437,337
+Purchases/conversions: 7,823
+Spend: $306,470.04
+Revenue: $839,690.13
+CTR: 1.450205%
+CVR: 1.788781%
+CPC: $0.700764
+CPA: $39.175513
+ROAS: 2.739877x
+Ad-spend return: 173.987673%
+Distinct campaigns: 24
+Compare monetary totals within $0.01 and rates before display rounding.
+
+DOCUMENTED CALCULATION EDGE CASES
+2026-04-03 / CMP001: paused day, all raw measures zero. Rates and unit costs N/A.
+2026-06-15 / CMP009: 2,050 impressions, 0 clicks, 0 purchases, $24 spend,
+$0 revenue. CTR=0%; CVR/CPC/CPA=N/A; ROAS=0x; ad-spend return=-100%.
+2026-05-09 / CMP014: 1,000 impressions, 14 clicks, 0 purchases, $7.80 spend,
+$0 revenue. CTR=1.4%; CVR=0%; CPC=$7.80/14; CPA=N/A; ROAS=0x;
+ad-spend return=-100%.
+2026-09-02 / CMP019: credit-funded test day: 1,000 impressions, 10 clicks,
+2 purchases, $0 reported spend, $190 revenue. CTR=1%; CVR=20%; CPC/CPA=$0;
+ROAS and ad-spend return=N/A because spend is zero.
+
+FILTER CONTROL
+June 1-30 + Instagram + Prospecting + Sales = 60 rows across 2 campaigns.
+April 1 alone = 16 rows. September 30 alone = 20 rows.
+October dates = no rows. Date boundaries should be inclusive.
+
+VALIDATION COMPLETED
+Saved CSV read back; column order/types checked; no nulls; no duplicates;
+nonnegative measures; conversions <= clicks <= impressions; stable campaign
+metadata; all four channels, three audiences, and three goals covered;
+expected active-date row counts checked; money totals independently recomputed
+using Decimal; platform subtotals reconciled; combined filters and date boundaries
+checked; documented edge-case records checked.
+
+NOT INCLUDED IN THIS CLEAN DATASET
+Malformed dates, negative spend, duplicate keys, and missing revenue. Use separate
+edited copies to test rejection/warnings. Do not mix those fixtures into the
+default demonstration data.
+
+HOW TO USE IN VS CODE
+Save campaign_data_synthetic.csv under campaign-analyzer/data/.
+Tell Codex to use it as the default sample dataset, map columns where needed,
+apply all shared filters, and check all-filter totals against this guide.
+Show a "Synthetic demonstration data" label in the app and your assignment.

@@ -1,0 +1,552 @@
+{
+  "checked_on": "2026-10-11 (America/Los_Angeles)",
+  "source": "campaign_data_synthetic.csv",
+  "source_sha256": "989eab9d76c7208b879381d9bf16059e0b0e6859d58d28265cc9f833234658ee",
+  "dataset_type": "synthetic",
+  "controlling_context": [
+    "campaign_dataset_guide.txt",
+    "campaign_dataset_generate_and_check.ipynb"
+  ],
+  "grain": "one campaign on one reporting date; stable channel, audience, and goal per campaign",
+  "unique_key": [
+    "date",
+    "campaign_id"
+  ],
+  "rows": 4040,
+  "columns": [
+    "date",
+    "campaign_id",
+    "campaign_name",
+    "channel",
+    "audience",
+    "goal",
+    "impressions",
+    "clicks",
+    "conversions",
+    "spend",
+    "revenue",
+    "currency",
+    "dataset_type"
+  ],
+  "date_range": [
+    "2026-04-01",
+    "2026-09-30"
+  ],
+  "reporting_dates": 183,
+  "campaigns": 24,
+  "channels": [
+    "Facebook",
+    "Instagram",
+    "Pinterest",
+    "Twitter"
+  ],
+  "audiences": [
+    "Existing Customers",
+    "Prospecting",
+    "Retargeting"
+  ],
+  "goals": [
+    "Awareness",
+    "Sales",
+    "Traffic"
+  ],
+  "currency": "USD",
+  "checks": {
+    "blank_or_null_cells": 0,
+    "cells_with_surrounding_whitespace": 0,
+    "exact_duplicate_rows": 0,
+    "duplicate_date_campaign_rows": 0,
+    "duplicate_date_campaign_channel_rows": 0,
+    "invalid_dates": 0,
+    "invalid_numeric_cells": 0,
+    "nonfinite_numeric_cells": 0,
+    "negative_numeric_cells": 0,
+    "fractional_count_cells": 0,
+    "dates_after_check_date": 0,
+    "clicks_above_impressions_rows": 0,
+    "purchases_above_clicks_rows": 0,
+    "zero_purchases_with_nonzero_revenue_rows": 0,
+    "purchases_with_nonpositive_revenue_rows": 0,
+    "campaigns_with_inconsistent_metadata": 0,
+    "non_USD_rows": 0,
+    "rows_not_labelled_synthetic": 0
+  },
+  "missing_overall_dates": 0,
+  "missing_dates_within_active_campaign_windows": 0,
+  "inactive_campaign_date_combinations": 352,
+  "observed_rows_per_day_counts": {
+    "16": 14,
+    "20": 60,
+    "24": 109
+  },
+  "zeros": {
+    "impressions": 1,
+    "clicks": 2,
+    "conversions": 1315,
+    "spend": 2,
+    "revenue": 1315
+  },
+  "baseline": {
+    "impressions": 30156909,
+    "clicks": 437337,
+    "conversions": 7823,
+    "spend": "306470.04",
+    "revenue": "839690.13",
+    "ctr_pct": 1.4502049928260219,
+    "cvr_pct": 1.7887807343078679,
+    "cpc": 0.70076403322838,
+    "cpa": 39.175513230218584,
+    "cpm": 10.16251499780697,
+    "roas": 2.7398767266124935,
+    "ad_spend_return_pct": 173.98767266124938,
+    "revenue_per_purchase": 107.33607695257574
+  },
+  "by_channel": {
+    "Facebook": {
+      "rows": 1010,
+      "impressions": 8197069,
+      "clicks": 122010,
+      "conversions": 2218,
+      "spend": "88139.72",
+      "revenue": "235565.76",
+      "ctr_pct": 1.4884588625519681,
+      "cvr_pct": 1.8178837800180314,
+      "cpc": 0.7223975084009507,
+      "cpa": 39.738376916140666,
+      "cpm": 10.75258973664855,
+      "roas": 2.672640212607891,
+      "ad_spend_return_pct": 167.26402126078912,
+      "revenue_per_purchase": 106.20638412984671
+    },
+    "Instagram": {
+      "rows": 1010,
+      "impressions": 8356367,
+      "clicks": 147478,
+      "conversions": 2807,
+      "spend": "100017.95",
+      "revenue": "302171.83",
+      "ctr_pct": 1.7648578622743591,
+      "cvr_pct": 1.90333473467229,
+      "cpc": 0.6781889502163034,
+      "cpa": 35.631617385108655,
+      "cpm": 11.96907100896837,
+      "roas": 3.021175998908196,
+      "ad_spend_return_pct": 202.1175998908196,
+      "revenue_per_purchase": 107.64938724617029
+    },
+    "Pinterest": {
+      "rows": 1010,
+      "impressions": 7569692,
+      "clicks": 89763,
+      "conversions": 1830,
+      "spend": "65841.52",
+      "revenue": "199339.34",
+      "ctr_pct": 1.1858210347263798,
+      "cvr_pct": 2.0387019150429464,
+      "cpc": 0.7335040049909205,
+      "cpa": 35.97897267759563,
+      "cpm": 8.698044781742771,
+      "roas": 3.027562850918387,
+      "ad_spend_return_pct": 202.7562850918387,
+      "revenue_per_purchase": 108.92860109289617
+    },
+    "Twitter": {
+      "rows": 1010,
+      "impressions": 6033781,
+      "clicks": 78086,
+      "conversions": 968,
+      "spend": "52470.85",
+      "revenue": "102613.20",
+      "ctr_pct": 1.2941470696400814,
+      "cvr_pct": 1.2396588376917757,
+      "cpc": 0.6719623235919371,
+      "cpa": 54.20542355371901,
+      "cpm": 8.696180719850455,
+      "roas": 1.9556229792351372,
+      "ad_spend_return_pct": 95.56229792351371,
+      "revenue_per_purchase": 106.00537190082645
+    }
+  },
+  "campaign_active_windows": [
+    {
+      "campaign_id": "CMP001",
+      "campaign_name": "Everyday Essentials - Facebook",
+      "channel": "Facebook",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP002",
+      "campaign_name": "Return to Cart - Facebook",
+      "channel": "Facebook",
+      "audience": "Retargeting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP003",
+      "campaign_name": "Loyalty Collection - Facebook",
+      "channel": "Facebook",
+      "audience": "Existing Customers",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP004",
+      "campaign_name": "Summer Launch - Facebook",
+      "channel": "Facebook",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-05-15",
+      "last_date": "2026-08-31",
+      "rows": 109
+    },
+    {
+      "campaign_id": "CMP005",
+      "campaign_name": "Discover the Brand - Facebook",
+      "channel": "Facebook",
+      "audience": "Prospecting",
+      "goal": "Awareness",
+      "first_date": "2026-04-15",
+      "last_date": "2026-09-30",
+      "rows": 169
+    },
+    {
+      "campaign_id": "CMP006",
+      "campaign_name": "Explore the Store - Facebook",
+      "channel": "Facebook",
+      "audience": "Prospecting",
+      "goal": "Traffic",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP007",
+      "campaign_name": "Everyday Essentials - Instagram",
+      "channel": "Instagram",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP008",
+      "campaign_name": "Return to Cart - Instagram",
+      "channel": "Instagram",
+      "audience": "Retargeting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP009",
+      "campaign_name": "Loyalty Collection - Instagram",
+      "channel": "Instagram",
+      "audience": "Existing Customers",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP010",
+      "campaign_name": "Summer Launch - Instagram",
+      "channel": "Instagram",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-05-15",
+      "last_date": "2026-08-31",
+      "rows": 109
+    },
+    {
+      "campaign_id": "CMP011",
+      "campaign_name": "Discover the Brand - Instagram",
+      "channel": "Instagram",
+      "audience": "Prospecting",
+      "goal": "Awareness",
+      "first_date": "2026-04-15",
+      "last_date": "2026-09-30",
+      "rows": 169
+    },
+    {
+      "campaign_id": "CMP012",
+      "campaign_name": "Explore the Store - Instagram",
+      "channel": "Instagram",
+      "audience": "Prospecting",
+      "goal": "Traffic",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP013",
+      "campaign_name": "Everyday Essentials - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP014",
+      "campaign_name": "Return to Cart - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Retargeting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP015",
+      "campaign_name": "Loyalty Collection - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Existing Customers",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP016",
+      "campaign_name": "Summer Launch - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-05-15",
+      "last_date": "2026-08-31",
+      "rows": 109
+    },
+    {
+      "campaign_id": "CMP017",
+      "campaign_name": "Discover the Brand - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Prospecting",
+      "goal": "Awareness",
+      "first_date": "2026-04-15",
+      "last_date": "2026-09-30",
+      "rows": 169
+    },
+    {
+      "campaign_id": "CMP018",
+      "campaign_name": "Explore the Store - Pinterest",
+      "channel": "Pinterest",
+      "audience": "Prospecting",
+      "goal": "Traffic",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP019",
+      "campaign_name": "Everyday Essentials - Twitter",
+      "channel": "Twitter",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP020",
+      "campaign_name": "Return to Cart - Twitter",
+      "channel": "Twitter",
+      "audience": "Retargeting",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP021",
+      "campaign_name": "Loyalty Collection - Twitter",
+      "channel": "Twitter",
+      "audience": "Existing Customers",
+      "goal": "Sales",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    },
+    {
+      "campaign_id": "CMP022",
+      "campaign_name": "Summer Launch - Twitter",
+      "channel": "Twitter",
+      "audience": "Prospecting",
+      "goal": "Sales",
+      "first_date": "2026-05-15",
+      "last_date": "2026-08-31",
+      "rows": 109
+    },
+    {
+      "campaign_id": "CMP023",
+      "campaign_name": "Discover the Brand - Twitter",
+      "channel": "Twitter",
+      "audience": "Prospecting",
+      "goal": "Awareness",
+      "first_date": "2026-04-15",
+      "last_date": "2026-09-30",
+      "rows": 169
+    },
+    {
+      "campaign_id": "CMP024",
+      "campaign_name": "Explore the Store - Twitter",
+      "channel": "Twitter",
+      "audience": "Prospecting",
+      "goal": "Traffic",
+      "first_date": "2026-04-01",
+      "last_date": "2026-09-30",
+      "rows": 183
+    }
+  ],
+  "combined_filter_control": {
+    "date_range": [
+      "2026-06-01",
+      "2026-06-30"
+    ],
+    "channel": "Instagram",
+    "audience": "Prospecting",
+    "goal": "Sales",
+    "rows": 60,
+    "campaigns": 2,
+    "metrics": {
+      "impressions": 728034,
+      "clicks": 10646,
+      "conversions": 175,
+      "spend": "9394.52",
+      "revenue": "20205.07",
+      "ctr_pct": 1.4622943433960502,
+      "cvr_pct": 1.6438098816456885,
+      "cpc": 0.8824459891038888,
+      "cpa": 53.68297142857143,
+      "cpm": 12.90395778219149,
+      "roas": 2.1507293613723744,
+      "ad_spend_return_pct": 115.07293613723746,
+      "revenue_per_purchase": 115.45754285714285
+    }
+  },
+  "boundary_rows": {
+    "2026-04-01": 16,
+    "2026-09-30": 20,
+    "2026-10-01": 0
+  },
+  "edge_case_controls": [
+    {
+      "date": "2026-04-03",
+      "campaign_id": "CMP001",
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0,
+      "spend": "0.00",
+      "revenue": "0.00",
+      "ctr_pct": null,
+      "cvr_pct": null,
+      "cpc": null,
+      "cpa": null,
+      "cpm": null,
+      "roas": null,
+      "ad_spend_return_pct": null,
+      "revenue_per_purchase": null
+    },
+    {
+      "date": "2026-06-15",
+      "campaign_id": "CMP009",
+      "impressions": 2050,
+      "clicks": 0,
+      "conversions": 0,
+      "spend": "24.00",
+      "revenue": "0.00",
+      "ctr_pct": 0.0,
+      "cvr_pct": null,
+      "cpc": null,
+      "cpa": null,
+      "cpm": 11.707317073170731,
+      "roas": 0.0,
+      "ad_spend_return_pct": -100.0,
+      "revenue_per_purchase": null
+    },
+    {
+      "date": "2026-05-09",
+      "campaign_id": "CMP014",
+      "impressions": 1000,
+      "clicks": 14,
+      "conversions": 0,
+      "spend": "7.80",
+      "revenue": "0.00",
+      "ctr_pct": 1.4000000000000001,
+      "cvr_pct": 0.0,
+      "cpc": 0.5571428571428572,
+      "cpa": null,
+      "cpm": 7.8,
+      "roas": 0.0,
+      "ad_spend_return_pct": -100.0,
+      "revenue_per_purchase": null
+    },
+    {
+      "date": "2026-09-02",
+      "campaign_id": "CMP019",
+      "impressions": 1000,
+      "clicks": 10,
+      "conversions": 2,
+      "spend": "0.00",
+      "revenue": "190.00",
+      "ctr_pct": 1.0,
+      "cvr_pct": 20.0,
+      "cpc": 0.0,
+      "cpa": 0.0,
+      "cpm": 0.0,
+      "roas": null,
+      "ad_spend_return_pct": null,
+      "revenue_per_purchase": 95.0
+    }
+  ],
+  "compatible_copy_preserves_all_values": true,
+  "numeric_ranges": {
+    "impressions": {
+      "min": 0.0,
+      "median": 6790.0,
+      "max": 27176.0
+    },
+    "clicks": {
+      "min": 0.0,
+      "median": 94.0,
+      "max": 497.0
+    },
+    "conversions": {
+      "min": 0.0,
+      "median": 1.0,
+      "max": 17.0
+    },
+    "spend": {
+      "min": 0.0,
+      "median": 64.8,
+      "max": 375.37
+    },
+    "revenue": {
+      "min": 0.0,
+      "median": 113.205,
+      "max": 2145.61
+    }
+  },
+  "assumptions_and_limits": [
+    "All conversions are attributed purchases, including Traffic and Awareness goals.",
+    "The supplied guide states purchases are assigned to one campaign in this simulation.",
+    "Inactive dates are expected outside the documented campaign windows; do not invent missing records as zero activity.",
+    "Synthetic channel factors and changes are chosen demonstration rules, not real advertising benchmarks or causal evidence.",
+    "Revenue excludes taxes, shipping, refunds, product cost, agency fees, and operating costs.",
+    "Ad-spend return is not full business profit ROI; CPA is cost per purchase event, not new-customer CAC.",
+    "Unique people, reach, retention, and full profit cannot be inferred; the CSV has no user-level identifiers.",
+    "Reporting dates have no timestamps or timezone conversion; production freshness is not assessable from this synthetic file.",
+    "Clean default data does not exercise malformed dates, missing revenue, or duplicate-input error paths; those need separate fixtures later."
+  ]
+}
